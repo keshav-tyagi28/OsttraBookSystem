@@ -1,10 +1,10 @@
-package services;
+package com.osttra.services;
 
 import java.util.List;
 import java.util.Scanner;
 
-import DAO.UserDAO;
-import TO.User;
+import com.osttra.dao.UserDAO;
+import com.osttra.to.User;
 
 public  class UserServices {
 
@@ -67,9 +67,9 @@ public  class UserServices {
 		
 		for(User u : users)
 		{
-			System.out.print(u.getUsername()+ " ");
-			System.out.print(u.getName()+ " ");
-			System.out.print(u.getRole()+ " ");
+			System.out.println("Username- " +u.getUsername()+ " ");
+			System.out.println("Name- " + u.getName()+ " ");
+			System.out.println("Role-" +u.getRole()+ " ");
 			System.out.println();
 		}
 		

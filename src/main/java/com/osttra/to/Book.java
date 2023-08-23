@@ -1,4 +1,4 @@
-package TO;
+package com.osttra.to;
 
 public class Book {
 

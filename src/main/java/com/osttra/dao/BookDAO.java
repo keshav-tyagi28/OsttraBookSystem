@@ -1,11 +1,12 @@
-package DAO;
+package com.osttra.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.*;
 
-import TO.Book;
+import com.osttra.to.Book;
+
 import utils.DbConnect;
 
 public class BookDAO {

@@ -1,4 +1,4 @@
-package DAO;
+package com.osttra.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.mysql.cj.protocol.Resultset;
+import com.osttra.to.Book;
+import com.osttra.to.User;
 
-import TO.Book;
-import TO.User;
 import utils.DbConnect;
 
 public class UserDAO {
@@ -29,16 +29,19 @@ public class UserDAO {
 		statement.setString(4, user.getRole());
 		
 		statement.executeUpdate();
-		}catch(Exception e) {
-			System.out.println("inside userdoa adduser function");
-			e.printStackTrace();
+		
+		
+		}
+		catch(Exception e) {
+			System.out.println("Same username exists");
+			
 		}
 		
 	}
 	
 	public User getUser(String username, String password)
 	{
-		User u=null;
+		User user=null;
 		
 		DbConnect dbobj= new DbConnect();
 		try {
@@ -60,7 +63,7 @@ public class UserDAO {
 			String name=resultset.getString(3);
 			String role=resultset.getString(4);
 		
-			u=new User(uname, pass, name, role);
+			user=new User(uname, pass, name, role);
 		}
 		
 		
@@ -71,7 +74,7 @@ public class UserDAO {
 	{
 		System.out.println("inside login function");
 	}
-		return u;	
+		return user;	
 		
 	}
 	

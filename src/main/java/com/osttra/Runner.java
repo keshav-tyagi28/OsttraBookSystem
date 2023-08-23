@@ -1,12 +1,15 @@
+package com.osttra;
 import java.util.Scanner;
 
-import TO.User;
-import services.BookServices;
-import services.UserServices;
+import com.osttra.services.BookServices;
+import com.osttra.services.UserServices;
+import com.osttra.to.User;
 
 public class Runner {
 
 	public static void main(String[] args) {
+		
+		BookServices bookser = new BookServices();
 
 		int userchoice = 1;
 
@@ -16,6 +19,7 @@ public class Runner {
 			System.out.println("Select 1 for register, 2 for login , 3 for exit");
 			userchoice = sc.nextInt();
 			UserServices service = new UserServices();
+			
 
 			switch (userchoice) {
 			case 1:
@@ -38,7 +42,7 @@ public class Runner {
 								+ "0 for exit");
 
 						adminchoice = sc.nextInt();
-						BookServices bookser = new BookServices();
+//						BookServices bookser = new BookServices();
 						switch (adminchoice) {
 
 						case 1:
@@ -81,7 +85,7 @@ public class Runner {
 						System.out.println(
 								"Press 5 for seeing all the books \n 6 for seeing specific book available \n 0 for exit");
 						customerchoice = sc.nextInt();
-						BookServices bookser = new BookServices();
+//						BookServices bookser = new BookServices();
 
 						switch (customerchoice) {
 						case 5:

@@ -1,11 +1,11 @@
-package services;
+package com.osttra.services;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import DAO.BookDAO;
-import TO.Book;
+import com.osttra.dao.BookDAO;
+import com.osttra.to.Book;
 
 public class BookServices {
 
@@ -48,10 +48,10 @@ public class BookServices {
 		
 		for(Book b: books)
 		{
-			System.out.print(b.getId()+ " ");
-			System.out.print(b.getBname()+ " ");
-			System.out.print(b.getAuthor()+ " ");
-			System.out.print(b.getPrice()+ " ");
+			System.out.println("Book Id- " + b.getId()+ " ");
+			System.out.println("Book Name- " + b.getBname()+ " ");
+			System.out.println("Book Author- " + b.getAuthor()+ " ");
+			System.out.println("Book Price -" + b.getPrice()+ " ");
 			System.out.println();
 		}
 		System.out.println();
@@ -92,11 +92,11 @@ public class BookServices {
 			System.out.println("NO Book Found");
 		
 		        else {
-            System.out.print(b.getId()+ " ");
-            System.out.print(b.getBname() + " ");
-            System.out.print(b.getAuthor() + " ");
-            System.out.print(b.getPrice() + " ");
-            System.out.println();
+		        	System.out.println("Book Id- " + b.getId()+ " ");
+					System.out.println("Book Name- " + b.getBname()+ " ");
+					System.out.println("Book Author- " + b.getAuthor()+ " ");
+					System.out.println("Book Price -" + b.getPrice()+ " ");
+					System.out.println();
         } 	
 	}
 	
